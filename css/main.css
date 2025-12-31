@@ -14264,3 +14264,12 @@ tr.item-editable .media-left img {
 	margin-right: -40px;
 	padding: 20px 40px;
 }
+.single-post .entry-content .post-inline-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 0 20px 0; /* space below the image */
+}
+.single-post.with_border {
+    overflow: hidden;
+}
