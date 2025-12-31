@@ -34,11 +34,10 @@
     <script src="js/vendor/jquery-1.12.4.min.js"></script>
 <![endif]-->
 
-    <!-- Inline styles to force full visibility of domain -->
 <style>
 .quote-overflow-fix {
     overflow: visible !important;
-    padding-right: 20px !important; /* Extra space on right for mobile */
+    padding-right: 0 !important; /* Don't push content off-screen */
 }
 .quote-overflow-fix blockquote,
 .quote-overflow-fix p,
@@ -48,29 +47,37 @@
     margin-right: 0 !important;
     padding-right: 0 !important;
 }
+
+/* Allow wrapping so it doesn't blow out the layout */
 .quote-overflow-fix h3 {
-    white-space: nowrap !important;
-    display: inline-block !important;
-    font-size: 1.6em !important; /* Base size */
+    white-space: normal !important; /* was nowrap */
+    display: block !important;
+    font-size: 1.6em !important;
 }
+
 .quote-overflow-fix h3 strong {
     margin-right: 8px !important;
 }
+
 .quote-overflow-fix h3 span a {
-    font-size: 0.7em !important; /* Smaller domain to fit */
+    font-size: 0.9em !important;
     text-decoration: none !important;
     color: inherit !important;
 }
+
+/* Mobile tweaks */
 @media (max-width: 768px) {
-    .quote-overflow-fix {
-        padding-right: 5px !important;
-    }
     .quote-overflow-fix h3 {
         font-size: 1.3em !important;
     }
     .quote-overflow-fix h3 span a {
-        font-size: 0.65em !important;
+        font-size: 0.8em !important;
     }
+}
+
+/* Extra safety: prevent horizontal scroll entirely */
+html, body {
+    overflow-x: hidden;
 }
 </style>
 </head>
