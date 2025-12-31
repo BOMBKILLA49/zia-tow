@@ -14282,4 +14282,8 @@ tr.item-editable .media-left img {
         margin: 0 auto 20px auto;
     }
 }
+.single-post,
+.item-content {
+    overflow: hidden;
+}
 
