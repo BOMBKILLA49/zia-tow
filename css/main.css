@@ -14264,26 +14264,3 @@ tr.item-editable .media-left img {
 	margin-right: -40px;
 	padding: 20px 40px;
 }
-/* Keep left-aligned images inside the content box */
-.entry-content img.alignleft {
-    float: left;
-    max-width: 45%;      /* keeps it from spilling outside */
-    height: auto;
-    margin: 0 20px 20px 0;
-    border-radius: 6px;  /* optional – just makes it look nicer */
-}
-
-/* On mobile: make it full-width instead of floating */
-@media (max-width: 768px) {
-    .entry-content img.alignleft {
-        float: none;
-        display: block;
-        max-width: 100%;
-        margin: 0 auto 20px auto;
-    }
-}
-.single-post,
-.item-content {
-    overflow: hidden;
-}
-
